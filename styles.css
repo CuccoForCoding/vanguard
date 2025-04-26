@@ -1,13 +1,20 @@
-/* CSS BY YOUR NAME */
-
 /* IMPORTED FONTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 /* IMPORT "INTER" FROM GOOGLE FONTS"
 
+/* CSS BY Joey Cucco */
+
+/* GLOBAL FONT */
+
 /* CSS RESET */
+
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
 License: none (public domain)
 */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,14 +35,12 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
-body {
-    line-height: 1;
-}
+
 ol, ul {
     list-style: none;
 }
@@ -60,12 +65,18 @@ table {
     --black: #000000;
     --charcoal: #333333;
     --font: "Inter", sans-serif;
+    --font: "Inter", sans-serif;
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
-
+body {
+    line-height: 1;
+    font-family: 'Inter', sans-serif;
+    min-width: 400px;
+}
+  
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
@@ -73,49 +84,301 @@ table {
     margin: 0 auto;
 }
 
+/* HEADER STYLES */
+header {
+    background-color: var(--black);
+    color: var(--blue);
+    padding: 16px 0;
+    border-bottom: 2px solid var(--blue);
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-family: var(--font);
+    font-size: 40px;
+    color: var(--blue);
+    margin: 0;
+    position: relative;
+    padding-left: 72px; 
+}
+
+header h1::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+    width: 60px;
+    height: 60px;
+    background: url('images/vanguard-logo.svg') no-repeat center / contain;
+}
+
+nav h2 {
+    font-size: 16px;
+    color: var(--white); 
+    text-indent: -9999px; 
+}
+
+nav {
+    font-family: var(--font);
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: var(--blue);
+    color: var(--black); 
+}
+
+
+
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
+#innovation-investment {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+    url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
     place-items: center;
     text-align: center;
-    padding: 1rem;
+    color: var(--white); 
+    font-family: var(--font);
+    padding: 16px;
     overflow: hidden;
 }
 
-/* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
-    content: "";
+/* INNOVATION & INVESTMENT SECTION */
 
-    left:-.5rem;
-    width: 3.75rem;
-    height: 3.75rem;
-    background: url('images/vanguard-logo.svg') no-repeat center/contain;
-
+#innovation-investment h2 {
+    font-size: 40px;
+    margin-bottom: 16px;
 }
+
+#innovation-investment p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 800px; 
+}
+
+#innovation-investment button {
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#innovation-investment button:hover {
+    background-color: var(--red); 
+}
+
+#expertise {
+    color: var(--black);
+    padding: 32px 0;
+    text-align: center;
+    font-family: var(--font);
+}
+#expertise h2 {
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: left;
+    font-size: 32px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+#expertise p{
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: left;
+}
+
+
+/* SERVICES SECTION */
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; 
+    padding: 32px; 
+  
+}
+
+#services h2 {
+    width: 100%;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 32px;
+    margin-bottom: 32px;
+    color: var(--black); 
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#services article {
+    background-color: var(--blue);
+    color: var(--white);
+    font-family: var(--font);
+    padding: 32px;
+    border-radius: 10px; 
+    width: 30%; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+#services article:hover {
+    transform: translateY(-10px);
+}
+
+#services h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#services p {
+    margin: 8px 0 0;
+    font-size: 16px;
+    text-align: left;
+    padding-top: 5px;
+}
+
+#proven {
+    background-color: var(--blue);
+}
+
+#proven h2 {
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: left;
+    font-size: 32px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    padding-top: 40px
+}
+
+#proven p {
+    color: var(--white);
+    padding-bottom: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+#proven h3 {
+    color: var(--black);
+    padding-bottom: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 32px; 
+    font-weight: bold;
+}
+
+#results {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 16px; 
+    background-color: var(--blue);
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+#results h3 {
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: left;
+    font-size: 32px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: 20px 0; 
+}
+
+/* Header Styling */
+thead th {
+    background-color: var(--black); 
+    color: var(--white);
+    padding: 12px;
+    text-align: left;
+}
+
+/* Body Styling */
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid var(--charcoal);
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(odd) {
+    background-color: var(--charcoal);
+    color: var(--white);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--black); 
+    color: var(--white); 
+}
+
+th, td {
+    text-align: left;
+}
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
+    grid-column: 2;
     grid-template-columns: repeat(5, 1fr);
     align-items: flex-end;
     justify-content: space-around;
-    gap: 1rem;
+    gap: 16px;
     height: 300px;
     width: 100%;
     max-width: 800px;
-    padding: 1rem;
+    padding: 16px;
     position: relative;
+    padding-bottom: 35px;
 }
+
 /* ADD ON TRANSITION ON HEIGHT */
 .bar {
     width: 50px;
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height 0.5s ease-in-out;
     height: 0;
 }
+
 /* THIS ONE IS DONE FOR YOU */
 .bar::after {
     content: attr(data-year);
@@ -123,7 +386,7 @@ table {
     bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: bold;
     color: var(--white);
 }
@@ -140,11 +403,9 @@ table {
     animation: stepUp 1s ease-in-out forwards;
 }
 
-
-/* MEDIA QUERIES (MEDIUM) */ 
-
     #results {
         grid-template-columns: 1fr 1fr;
+        background-color: var(--blue);
     }
     .results-container {
         flex-direction: row;
@@ -157,5 +418,129 @@ table {
         width: 50%;
     }
 
+#contact {
+    background-color: var(--black);
+    padding: 20px; 
+}
 
-/* MEDIA QUERIES (LARGE) */
+#contact h2 {
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: left;
+    font-size: 40px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+#contact p {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: left;
+    color: var(--white);
+    padding-bottom: 20px;
+}
+
+#contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+    padding: 50px;
+    width: 90%; 
+    margin: auto;
+}
+
+/* LEFT COLUMN */
+#contact form label:nth-of-type(1),
+#contact form input:nth-of-type(1),
+#contact form label:nth-of-type(2),
+#contact form input:nth-of-type(2),
+#contact form label:nth-of-type(3),
+#contact form textarea {
+   grid-column: 1; 
+    width: 100%;
+
+}
+
+/* RIGHT COLUMN */
+#contact form label:nth-of-type(4),
+#contact form input[type="email"],
+#contact form label:nth-of-type(5),
+#contact form input[name="industry"],
+#contact form button[type="submit"] {
+    grid-column: 2;
+}
+
+/* SUBMIT BUTTON */
+#contact form button[type="submit"] {
+    width: 100%;
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#contact form button[type="submit"]:hover {
+    background-color: var(--red); 
+}
+
+#contact label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--white);
+}
+
+#contact input, 
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 3px solid var(--blue);
+    border-radius: 4px;
+    color: var(--white);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: var(--black);
+    color: var(--white);
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--blue);
+    text-decoration: none; 
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .container {
+    text-align: center; 
+}
+
+    
+/* MEDIA QUERIES (SMALL) */ 
+@media (max-width: 480px) {
+    #services article {
+        width: 100%; 
+    }
+}
+/* MEDIA QUERIES (MEDIUM) */ 
+@media (max-width: 768px) {
+    #services article {
+        width: 48%;
+    }
+}
+
+/* MEDIA QUERIES (LARGE) */ 
