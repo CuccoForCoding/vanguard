@@ -134,6 +134,7 @@ nav ul {
     gap: 16px;
     margin: 0;
     padding: 0;
+    transform: translate(1px, -50px)
 }
 
 nav ul li a {
@@ -367,6 +368,7 @@ th, td {
     padding: 16px;
     position: relative;
     padding-bottom: 35px;
+    transform: translate(1px, -350px)
 }
 
 /* ADD ON TRANSITION ON HEIGHT */
@@ -544,3 +546,8 @@ footer .container {
 }
 
 /* MEDIA QUERIES (LARGE) */ 
+@media (max-width: 1024px) {
+    #services article {
+        width: 48%;
+    }
+}
